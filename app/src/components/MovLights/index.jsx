@@ -46,7 +46,7 @@ export default function MovLights() {
           ease: "easeInOut",
           times: [0, 0.2, 0.5, 0.8, 1],
           repeat: Infinity,
-          repeatDelay: 10,
+          repeatDelay: 1,
         }}
       />
       <Light
@@ -63,7 +63,7 @@ export default function MovLights() {
           ease: "easeInOut",
           times: [0, 0.2, 0.5, 0.8, 1],
           repeat: Infinity,
-          repeatDelay: 10,
+          repeatDelay: 1,
         }}
       />
       <Light
@@ -80,7 +80,7 @@ export default function MovLights() {
           ease: "easeInOut",
           times: [0, 0.2, 0.5, 0.8, 1],
           repeat: Infinity,
-          repeatDelay: 10,
+          repeatDelay: 1,
         }}
       />
       <Light
@@ -97,7 +97,7 @@ export default function MovLights() {
           ease: "easeInOut",
           times: [0, 0.2, 0.5, 0.8, 1],
           repeat: Infinity,
-          repeatDelay: 10,
+          repeatDelay: 1,
         }}
       />
       <Light theme={LightTheme5} positionX={windowSize * 0.5} />

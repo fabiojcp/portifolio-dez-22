@@ -4,7 +4,8 @@ import { MousePositionX } from "../../utils/mousePosition/position";
 export const MovWrapper = styled.div`
   margin: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  box-shadow: inset 0 0 40vh 30vh #1d1d1d;
   left: 0;
   top: 0;
   font-weight: 100;
@@ -17,6 +18,7 @@ export const MovWrapper = styled.div`
   -moz-animation: fadeIn 1 1s ease-out;
   -o-animation: fadeIn 1 1s ease-out;
   animation: fadeIn 1 1s ease-out;
+  z-index: 1;
 `;
 
 export const Light = styled.div`
@@ -24,11 +26,11 @@ export const Light = styled.div`
   width: 1px;
   border-radius: 100%;
   opacity: 0.1;
-  background-color: #05FDD860;
-  box-shadow: #05FDD860 0px 0px 20px 2px;
+  background-color: #05fdd860;
+  box-shadow: #05fdd860 0px 0px 20px 2px;
   top: 100vh;
   bottom: 0px;
-  left: ${props => props.positionX}px;
+  left: ${(props) => props.positionX}px;
   margin: auto;
   -webkit-animation: ${(props) => props.theme.animation};
   -moz-animation: ${(props) => props.theme.animation};
@@ -46,7 +48,6 @@ export const LightTheme1 = {
   transform: "scale(1)",
   left: `${MousePositionX}px`,
 };
-
 
 export const LightTheme2 = {
   animation: "floatUp 7s infinite linear, size 5s infinite linear",
