@@ -34,7 +34,7 @@ export default function MovLights() {
     <MovWrapper>
       <Light
         theme={LightTheme1}
-        positionX={windowSize * 0.1}
+        propPos={windowSize * 0.1}
         as={motion.div}
         animate={{
           scale: [1, 2, 2, 1, 1],
@@ -51,7 +51,7 @@ export default function MovLights() {
       />
       <Light
         theme={LightTheme2}
-        positionX={windowSize * 0.2}
+        propPos={windowSize * 0.2}
         as={motion.div}
         animate={{
           scale: [1, 2, 2, 1, 1],
@@ -68,7 +68,7 @@ export default function MovLights() {
       />
       <Light
         theme={LightTheme3}
-        positionX={windowSize * 0.3}
+        propPos={windowSize * 0.3}
         as={motion.div}
         animate={{
           scale: [1, 2, 2, 1, 1],
@@ -85,7 +85,7 @@ export default function MovLights() {
       />
       <Light
         theme={LightTheme4}
-        positionX={windowSize * 0.4}
+        propPos={windowSize * 0.4}
         as={motion.div}
         animate={{
           scale: [1, 2, 2, 1, 1],
@@ -100,11 +100,11 @@ export default function MovLights() {
           repeatDelay: 1,
         }}
       />
-      <Light theme={LightTheme5} positionX={windowSize * 0.5} />
-      <Light theme={LightTheme6} positionX={windowSize * 0.6} />
-      <Light theme={LightTheme7} positionX={windowSize * 0.7} />
-      <Light theme={LightTheme8} positionX={windowSize * 0.8} />
-      <Light theme={LightTheme9} positionX={windowSize * 0.9} />
+      <Light theme={LightTheme5} propPos={windowSize * 0.5} />
+      <Light theme={LightTheme6} propPos={windowSize * 0.6} />
+      <Light theme={LightTheme7} propPos={windowSize * 0.7} />
+      <Light theme={LightTheme8} propPos={windowSize * 0.8} />
+      <Light theme={LightTheme9} propPos={windowSize * 0.9} />
     </MovWrapper>
   );
 }

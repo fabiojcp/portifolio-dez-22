@@ -31,5 +31,29 @@ body::-webkit-scrollbar {
 }
 
 #root {
-    z-index: 0;
+  z-index: 0;
 }
+
+a {
+  pointer-events: none;
+  cursor: default;
+}
+canvas {
+  cursor: default;
+  overflow: visible;
+}
+
+.myCanvasContainer {
+  cursor: default;
+  overflow: visible;
+  pointer-events: none;
+  background-color: #ffffff;
+}
+
+/* html {
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
+  pointer-events: all;
+} */

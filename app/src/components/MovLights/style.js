@@ -9,6 +9,7 @@ export const MovWrapper = styled.div`
   left: 0;
   top: 0;
   font-weight: 100;
+  background-color: #000000ef;
   position: absolute;
   -webkit-overflow-y: hidden;
   -moz-overflow-y: hidden;
@@ -18,7 +19,7 @@ export const MovWrapper = styled.div`
   -moz-animation: fadeIn 1 1s ease-out;
   -o-animation: fadeIn 1 1s ease-out;
   animation: fadeIn 1 1s ease-out;
-  z-index: 1;
+  z-index: 0;
 `;
 
 export const Light = styled.div`
@@ -30,7 +31,7 @@ export const Light = styled.div`
   box-shadow: #05fdd860 0px 0px 20px 2px;
   top: 100vh;
   bottom: 0px;
-  left: ${(props) => props.positionX}px;
+  left: ${(props) => props.propPos}px;
   margin: auto;
   -webkit-animation: ${(props) => props.theme.animation};
   -moz-animation: ${(props) => props.theme.animation};

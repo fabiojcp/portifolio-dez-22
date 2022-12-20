@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 export default class Tag extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       x: props.x,
@@ -10,31 +10,31 @@ export default class Tag extends React.Component {
       text: props.text,
       scale: props.scale,
       hover: false,
-    }
+    };
   }
 
-  componentWillReceiveProps(props){
+  componentWillReceiveProps(props) {
     this.setState({
-        x: props.x,
-        y: props.y,
-        z: props.z,
-    })
+      x: props.x,
+      y: props.y,
+      z: props.z,
+    });
   }
   handleMouseEnter = () => {
-    this.setState({hover: true})
-  }
+    this.setState({ hover: true });
+  };
 
   handleMouseLeave = () => {
-    this.setState({ hover: false })
-  }
+    this.setState({ hover: false });
+  };
 
   showExtra = () => {
     if (this.state.hover) {
-      this.props.showMore()
+      this.props.showMore();
     }
-  }
+  };
 
-  render(){
+  render() {
     const scale = this.state.scale;
     return (
       <span
@@ -48,11 +48,11 @@ export default class Tag extends React.Component {
           depth: `${this.state.z}px`,
           width: 50,
           opacity: (this.state.z + scale) / (scale * 2),
-          color: this.state.hover ? 'red' : null,
+          color: this.state.hover ? "red" : null,
         }}
       >
         {this.state.text}
       </span>
-    )
+    );
   }
 }

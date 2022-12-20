@@ -1,31 +1,31 @@
 import React from "react";
 import { render } from "react-dom";
-import tags from "./tag.jsx";
-import Tag from "./tag.js";
-import Extra from "./extra.js";
+import tags from "./tags.jsx";
+import Tag from "./tag.jsx";
+import Extra from "./extra.jsx";
 
-const scale = 200,
-  stepAngle = 0.08722,
+const scale = 60,
+  stepAngle = 0.05722,
   styles = {
     // fontFamily: "sans-serif",
-    // textAlign: "center",
+    textAlign: "center",
     display: "inline-block",
     width: scale * 2,
     height: scale * 2,
     position: "relative",
   };
 
-export default function Cloud() {
-  //   constructor(props) {
-  //     super(props);
-  //     this.state = {
-  //       tags: this.adjustElems(tags),
-  //       theta: 0,
-  //       rho: 0,
-  //       extraText: "",
-  //       extraVisible: false
-  //     };
-  //   }
+export default class Cloud extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tags: this.adjustElems(tags),
+      theta: 0,
+      rho: 0,
+      extraText: "",
+      extraVisible: false,
+    };
+  }
 
   adjustElems = (tags) => {
     let len = tags.length;
@@ -93,7 +93,7 @@ export default function Cloud() {
     this.setState({ extraVisible: false });
   };
 
-  return (
+  render = () => (
     <div>
       <div style={styles} onMouseMove={this._onMouseMove.bind(this)}>
         {this.state.tags.map((v) => (
@@ -105,15 +105,14 @@ export default function Cloud() {
           />
         ))}
       </div>
-      {this.state.extraVisible && (
+      {/* {this.state.extraVisible && (
         <Extra
           title={this.state.extraTitle}
           text={this.state.extraText}
           onClose={this.closeExtra}
         />
-      )}
+      )} */}
     </div>
   );
 }
 
-render(<App />, document.getElementById("root"));

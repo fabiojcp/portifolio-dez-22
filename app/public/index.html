@@ -1,17 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <link rel="icon" href="./protifolioIcon.ico">
+    <link rel="icon" href="./protifolioIcon.ico" />
     <style>
-
       @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
     </style>
     <meta charset="utf-3" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"
+    />
     <meta name="theme-color" content="#000000" />
-    <title>Fábio | Full-Stack Developer</title>
   </head>
+  <title>Fábio | Full-Stack Developer</title>
   <body>
     <div id="root"></div>
+    <script src="tagcanvas.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      console.log(window.location.pathname);
+      window.onload = function () {
+        try {
+          TagCanvas.Start("myCanvas");
+        } catch (e) {
+          // something went wrong, hide the canvas container
+          document.getElementById("myCanvasContainer").style.display = "none";
+        }
+      };
+      location.onbeforeunload = function () {
+        try {
+          TagCanvas.Start("myCanvas");
+        } catch (e) {
+          // something went wrong, hide the canvas container
+          document.getElementById("myCanvasContainer").style.display = "none";
+        }
+      };
+      location.reload = function () {
+        try {
+          TagCanvas.Start("myCanvas");
+        } catch (e) {
+          // something went wrong, hide the canvas container
+          document.getElementById("myCanvasContainer").style.display = "none";
+        }
+      };
+      window.location.pathname == "/" || window.location.pathname == "/skills"
+        ? function () {
+            try {
+              TagCanvas.Start("myCanvas");
+            } catch (e) {
+              // something went wrong, hide the canvas container
+              document.getElementById("myCanvasContainer").style.display =
+                "none";
+            }
+          }
+        : console.log("ops");
+      document
+        .getElementById("root")
+        .addEventListener("mouseenter", () => {
+          try {
+            TagCanvas.Start("myCanvas");
+          } catch (e) {
+            // something went wrong, hide the canvas container
+            document.getElementById("myCanvasContainer").style.display = "none";
+          }
+        });
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        // set colour of text and outline of active tag
+        TagCanvas.textColour = "#ffffff";
+        TagCanvas.textFont = "Helvetica, Arial, sans-serif";
+        TagCanvas.textHeight = 20;
+        TagCanvas.txtScale = 1;
+        TagCanvas.zoom = 0.8;
+        TagCanvas.outlineColour = "transparent";
+        TagCanvas.audioIconSize = 100;
+        TagCanvas.imageMode = "text";
+        TagCanvas.txtOpt = "true";
+        TagCanvas.initial = [0.1, -0.08];
+        TagCanvas.maxSpeed = 0.04;
+        TagCanvas.depth = 1.5;
+        TagCanvas.minSpeed = 0.1;
+        TagCanvas.Start("myCanvas");
+      };
+    </script>
   </body>
 </html>

@@ -48,6 +48,7 @@ export const Text = styled.p`
   -moz-overflow-y: hidden;
   -o-overflow-y: hidden;
   overflow-y: hidden;
+
   :hover {
     color: ${(props) => props.AnimationColorHover};
   }

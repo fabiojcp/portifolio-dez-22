@@ -12,15 +12,22 @@ export default function AboutMe() {
     green: "#67F08E",
     cursive: "#FFFFFF40",
     toMoveRight: "0 0 0 5vw",
+    transparentToRed: "transparent",
   });
 
   return (
-    <MainWrapper backgroudColor={"#1D1D1D"} boxShadow={"inset 0 0 40vh 30vh #1d1d1d;"}>
+    <MainWrapper
+      boxShadow={"inset 0 0 40vh 30vh #1d1d1d"}
+      propAnimation={"fadeIn 1 1s ease-out"}
+      propZIndex={1}
+      backgroudColor={"000000ef"}
+      id="ABOUTME"
+    >
+      <Shadow />
       <MovLights></MovLights>
       <TextWrapper>
-        
         <Cursive
-          propFontSize={"1.5rem"}
+          propFontSize={"2rem"}
           propFontWeight={100}
           propColor={textColor.cursive}
           propMargin={"0 0 2vh 0"}
@@ -28,7 +35,7 @@ export default function AboutMe() {
           &#10096;&#160;h1&#160;&#10097;
         </Cursive>
         <Text
-          propFontSize={"4rem"}
+          propFontSize={"5rem"}
           propFontWeight={1000}
           propColor={textColor.white}
           propMargin={"0 0 0 2vw"}
@@ -37,12 +44,11 @@ export default function AboutMe() {
         </Text>
         <GenericWrapper style={{ display: "inline", zIndex: 2 }}>
           <Text
-            propFontSize={"6rem"}
+            propFontSize={"5rem"}
             propFontWeight={1000}
             propColor={textColor.white}
             propMargin={"0 0 0 4vw"}
             propDisplay={"inline"}
-            AnimationColorHover={"#FD215500"}
           >
             Eu sou&#160;
           </Text>
@@ -53,7 +59,7 @@ export default function AboutMe() {
             propColor={textColor.green}
             propsLetterSpacing={"0.2vw"}
             propsPosition={"absolute"}
-            propMargin={"-5px 0 0 -0.3vw"}
+            propMargin={"-1px 0 0 -0.3vw"}
             propZIndex={-1}
           >
             F
@@ -72,6 +78,7 @@ export default function AboutMe() {
                 green: "#67F08E00",
                 cursive: "#FFFFFF00",
                 toMoveRight: "0 0 0 30vw",
+                transparentToRed: "#FD2155",
               })
             }
             onMouseLeave={() =>
@@ -82,6 +89,7 @@ export default function AboutMe() {
                 green: "#67F08E",
                 cursive: "#FFFFFF40",
                 toMoveRight: "0 0 0 5vw",
+                transparentToRed: "transparent",
               })
             }
           >
@@ -96,6 +104,7 @@ export default function AboutMe() {
                 green: "#67F08E00",
                 cursive: "#FFFFFF00",
                 toMoveRight: "0 0 0 30vw",
+                transparentToRed: "#FD2155",
               })
             }
             onMouseLeave={() =>
@@ -106,6 +115,7 @@ export default function AboutMe() {
                 green: "#67F08E",
                 cursive: "#FFFFFF40",
                 toMoveRight: "0 0 0 5vw",
+                transparentToRed: "transparent",
               })
             }
             propFontSize={"6rem"}
@@ -116,9 +126,8 @@ export default function AboutMe() {
           >
             ábio
           </Text>
-
           <Text
-            propFontSize={"6rem"}
+            propFontSize={"5rem"}
             propDisplay={"inline"}
             propColor={textColor.white}
             propBorderRadius={100}
@@ -126,9 +135,39 @@ export default function AboutMe() {
           >
             .
           </Text>
+          <Text
+            onMouseEnter={() =>
+              setTextColor({
+                white: "#FFFFFF00",
+                toPink: "#FD2155",
+                toWhite: "#FFFFFF",
+                green: "#67F08E00",
+                cursive: "#FFFFFF00",
+                toMoveRight: "0 0 0 30vw",
+                transparentToRed: "#FD2155",
+              })
+            }
+            onMouseLeave={() =>
+              setTextColor({
+                white: "#FFFFFF",
+                toPink: "#FFFFFF",
+                toWhite: "#FFFFFF80",
+                green: "#67F08E",
+                cursive: "#FFFFFF40",
+                transparentToRed: "transparent",
+              })
+            }
+            propFontSize={"5rem"}
+            propFontWeight={1000}
+            propColor={textColor.transparentToRed}
+            propDisplay={"inline"}
+            AnimationColorHover={"#FD2155"}
+          >
+            Casanova
+          </Text>
         </GenericWrapper>
         <Cursive
-          propFontSize={"1.5rem"}
+          propFontSize={"2rem"}
           propFontWeight={100}
           propColor={textColor.cursive}
           propMargin={"2vh 0"}
@@ -136,7 +175,7 @@ export default function AboutMe() {
           &#10096;&#47;&#160;h1&#160;&#10097;
         </Cursive>
         <Cursive
-          propFontSize={"1.5rem"}
+          propFontSize={"2rem"}
           propFontWeight={100}
           propColor={textColor.cursive}
           propMargin={"2vh 0"}
@@ -144,7 +183,7 @@ export default function AboutMe() {
           &#10096;&#160;p&#160;&#10097;
         </Cursive>
         <Text
-          propFontSize={"2rem"}
+          propFontSize={"2.5rem"}
           propFontWeight={800}
           propColor={textColor.toWhite}
           propMargin={textColor.toMoveRight}
@@ -153,7 +192,7 @@ export default function AboutMe() {
           &#123;&#160;Full-Stack Developer&#160;&#125;
         </Text>
         <Cursive
-          propFontSize={"1.5rem"}
+          propFontSize={"2rem"}
           propFontWeight={100}
           propColor={textColor.cursive}
           propMargin={"2vh 0"}
@@ -161,7 +200,6 @@ export default function AboutMe() {
           &#10096;&#47;&#160;p&#160;&#10097;
         </Cursive>
       </TextWrapper>
-      <Shadow/>
     </MainWrapper>
   );
 }
